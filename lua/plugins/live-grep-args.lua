@@ -22,21 +22,21 @@ return {
       function()
         require("telescope").extensions.live_grep_args.live_grep_args()
       end,
-      desc = "Grep (root dir - works)",
+      desc = "Grep (root dir)",
     },
     {
       "<leader>sg",
       function()
         require("telescope").extensions.live_grep_args.live_grep_args()
       end,
-      desc = "Grep (root dir - works)",
+      desc = "Grep (root dir)",
     },
     {
       "<leader>sG",
       function()
         require("telescope").extensions.live_grep_args.live_grep_args({ search_dirs = { "%:p" } })
       end,
-      desc = "Grep (cwd - works)",
+      desc = "Grep (cwd)",
     },
   },
 }
