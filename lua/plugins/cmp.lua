@@ -9,9 +9,11 @@ return {
     "hrsh7th/nvim-cmp",
     dependencies = {
       "hrsh7th/cmp-emoji",
+      "zbirenbaum/copilot-cmp",
     },
     opts = function(_, opts)
       local cmp = require("cmp")
+      local copilot = require("copilot.suggestion")
       local has_words_before = function()
         unpack = unpack or table.unpack
         local line, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -21,7 +23,9 @@ return {
       opts.mapping["<C-j>"] = cmp.mapping.select_next_item()
       opts.mapping["<C-k>"] = cmp.mapping.select_prev_item()
       opts.mapping["<Tab>"] = cmp.mapping(function(fallback)
-        if cmp.visible() then
+        if copilot.is_visible() then
+          copilot.accept()
+        elseif cmp.visible() then
           cmp.select_next_item()
         -- elseif luasnip.expand_or_jumpable() then
         --   luasnip.expand_or_jump()
