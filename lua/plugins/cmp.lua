@@ -1,10 +1,4 @@
 return {
-  -- {
-  --   "L3MON4D3/LuaSnip",
-  --   keys = function()
-  --     return {}
-  --   end,
-  -- },
   {
     "hrsh7th/nvim-cmp",
     dependencies = {
@@ -20,6 +14,11 @@ return {
         return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
       end
 
+      opts.mapping["<CR>"] = cmp.mapping.confirm({ select = false }) -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+      opts.mapping["<S-CR>"] = cmp.mapping.confirm({
+        behavior = cmp.ConfirmBehavior.Replace,
+        select = false,
+      }) -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
       opts.mapping["<C-j>"] = cmp.mapping.select_next_item()
       opts.mapping["<C-k>"] = cmp.mapping.select_prev_item()
       opts.mapping["<Tab>"] = cmp.mapping(function(fallback)
