@@ -3,9 +3,10 @@
 -- Add any additional options here
 
 vim.g.minipairs_disable = true
-vim.filetype.add({
-  extension = {
-    tfvars = "terraform",
-    yml = "yaml",
-  },
-})
+-- vim.filetype.add({
+--   extension = {
+--     tfvars = "terraform",
+--     yml = "yaml",
+--   },
+-- })
+vim.opt.conceallevel = 0
