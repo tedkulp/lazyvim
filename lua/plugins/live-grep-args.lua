@@ -34,7 +34,9 @@ return {
     {
       "<leader>sG",
       function()
-        require("telescope").extensions.live_grep_args.live_grep_args({ search_dirs = { "%:p" } })
+        require("telescope").extensions.live_grep_args.live_grep_args({
+          search_dirs = { "%:p" },
+        })
       end,
       desc = "Grep (cwd)",
     },
