@@ -10,17 +10,26 @@ return {
           enabled = true,
         },
         integration = {
-          which_key = true,
+          aerial = true,
+          bufferline = true,
           indent_blankline = {
+            enbled = true,
             colored_indent_levels = true,
           },
-          bufferline = true,
           lualine = true,
-          hop = true,
+          leap = true,
+          mason = true,
+          neogit = true,
           neotree = {
             enabled = true,
             show_root = true,
           },
+          notify = true,
+          telescope = {
+            enabled = true,
+          },
+          treesitter = true,
+          which_key = true,
         },
       })
     end,
@@ -30,5 +39,14 @@ return {
     opts = {
       colorscheme = "catppuccin",
     },
+  },
+  {
+    "akinsho/bufferline.nvim",
+    after = "catppuccin",
+    config = function()
+      require("bufferline").setup({
+        highlights = require("catppuccin.groups.integrations.bufferline").get(),
+      })
+    end,
   },
 }
