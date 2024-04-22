@@ -1,5 +1,5 @@
 return {
-  { "towolf/vim-helm" },
+  { "towolf/vim-helm", ft = "helm" },
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
