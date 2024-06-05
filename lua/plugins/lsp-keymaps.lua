@@ -7,4 +7,11 @@ return {
     keys[#keys + 1] = { "gr", false }
     keys[#keys + 1] = { "gR", "<cmd>Telescope lsp_references<cr>", desc = "References" }
   end,
+  opts = {
+    setup = {
+      rust_analyzer = function()
+        return true
+      end,
+    },
+  },
 }
