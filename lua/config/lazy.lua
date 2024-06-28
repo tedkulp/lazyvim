@@ -25,6 +25,9 @@ require("lazy").setup({
   },
   install = { colorscheme = { "catpuccin" } },
   checker = { enabled = true }, -- automatically check for plugin updates
+  git = {
+    timeout = 15,
+  },
   performance = {
     rtp = {
       -- disable some rtp plugins
