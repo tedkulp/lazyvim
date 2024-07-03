@@ -5,7 +5,8 @@ return {
   config = function()
     require("lsp_lines").setup()
 
-    vim.diagnostic.config({ virtual_text = false, virtual_lines = true })
+    -- Default to off
+    vim.diagnostic.config({ virtual_text = true, virtual_lines = false })
   end,
   keys = {
     {
