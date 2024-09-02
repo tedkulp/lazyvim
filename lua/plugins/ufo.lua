@@ -3,7 +3,7 @@ return {
   dependencies = { "kevinhwang91/promise-async" },
   event = { "BufReadPost", "BufNewFile" },
   config = function()
-    vim.o.foldcolumn = "1" -- '0' is not bad
+    vim.o.foldcolumn = "0" -- '0' is not bad
     vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
     vim.o.foldlevelstart = 99
     vim.o.foldenable = true
@@ -76,6 +76,38 @@ return {
       end,
       mode = "n",
       desc = "Peek fold",
+    },
+    {
+      "zR",
+      function()
+        require("ufo").openAllFolds()
+      end,
+      mode = "n",
+      desc = "Open all folds",
+    },
+    {
+      "zr",
+      function()
+        require("ufo").openFoldsExceptKinds()
+      end,
+      mode = "n",
+      desc = "Open folds",
+    },
+    {
+      "zM",
+      function()
+        require("ufo").closeAllFolds()
+      end,
+      mode = "n",
+      desc = "Close all folds",
+    },
+    {
+      "zm",
+      function()
+        require("ufo").closeFoldsWith()
+      end,
+      mode = "n",
+      desc = "Close folds",
     },
   },
 }

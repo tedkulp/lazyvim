@@ -9,4 +9,4 @@ vim.g.minipairs_disable = true
 --     yml = "yaml",
 --   },
 -- })
-vim.opt.conceallevel = 0
+vim.opt.conceallevel = 2
