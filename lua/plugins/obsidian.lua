@@ -25,24 +25,25 @@ return {
     },
 
     templates = {
-      folder = "_templates",
+      folder = "templates",
       date_format = "%Y-%m-%d",
       time_format = "%H:%M",
     },
 
     daily_notes = {
-      folder = "journals",
+      folder = "01 - Journal/Daily",
       date_format = "%Y-%m-%d",
       default_tags = { "daily" },
-      template = nil,
+      template = "daily",
     },
 
     attachments = {
-      img_folder = "_assets",
+      img_folder = "05 - Attachments",
     },
   },
 
   keys = {
+    { "<leader>o", desc = "Obsidian" },
     { "<leader>ot", "<cmd>ObsidianToday<cr>", mode = { "n", "v" }, desc = "Journal for Today" },
     { "<leader>oy", "<cmd>ObsidianYesterday<cr>", mode = { "n", "v" }, desc = "Journal for Yesterday" },
     { "<leader>oo", "<cmd>ObsidianQuickSwitch<cr>", mode = { "n", "v" }, desc = "Open Page" },
