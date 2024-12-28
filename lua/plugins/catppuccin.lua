@@ -12,12 +12,15 @@ return {
         integration = {
           aerial = true,
           bufferline = true,
+          fzf_lua = true,
+          harpoon = true,
           indent_blankline = {
             enbled = true,
             colored_indent_levels = true,
           },
           lualine = true,
           leap = true,
+          markdown = true,
           mason = true,
           neogit = true,
           neotree = {
@@ -25,9 +28,11 @@ return {
             show_root = true,
           },
           notify = true,
-          telescope = {
-            enabled = true,
-          },
+          render_markdown = true,
+          snacks = true,
+          -- telescope = {
+          --   enabled = true,
+          -- },
           treesitter = true,
           which_key = true,
         },
