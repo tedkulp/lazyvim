@@ -3,6 +3,7 @@
 -- Add any additional options here
 
 vim.g.minipairs_disable = true
+vim.g.snacks_animate = false
 -- vim.filetype.add({
 --   extension = {
 --     tfvars = "terraform",
