@@ -11,7 +11,8 @@ return {
         },
         integration = {
           aerial = true,
-          bufferline = true,
+          blink_cmp = true,
+          cmp = false,
           fzf_lua = true,
           harpoon = true,
           indent_blankline = {
@@ -22,7 +23,9 @@ return {
           leap = true,
           markdown = true,
           mason = true,
-          neogit = true,
+          mini = {
+            enabled = true,
+          },
           neotree = {
             enabled = true,
             show_root = true,
@@ -30,9 +33,6 @@ return {
           notify = true,
           render_markdown = true,
           snacks = true,
-          -- telescope = {
-          --   enabled = true,
-          -- },
           treesitter = true,
           which_key = true,
         },
