@@ -17,5 +17,10 @@ return {
         never_show = {},
       },
     },
+    window = {
+      mappings = {
+        ["L"] = "expand_all_nodes",
+      },
+    },
   },
 }
