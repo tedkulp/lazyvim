@@ -1,5 +1,6 @@
 return {
   "mg979/vim-visual-multi",
+  vscode = true,
   init = function()
     vim.cmd([[
       let g:VM_theme = 'neon'

@@ -5,6 +5,7 @@ return {
     completion = {
       menu = { border = "single" },
       documentation = { window = { border = "single" } },
+      trigger = { prefetch_on_insert = false },
     },
     signature = { window = { border = "single" } },
     sources = {
@@ -28,11 +29,16 @@ return {
           max_items = 3,
           min_keyword_length = 2,
         },
-        codeium = {
-          score_offset = 95,
-          max_items = 3,
-          min_keyword_length = 0,
+        minuet = {
+          name = "minuet",
+          module = "minuet.blink",
+          score_offset = 110,
         },
+        -- codeium = {
+        --   score_offset = 95,
+        --   max_items = 3,
+        --   min_keyword_length = 0,
+        -- },
       },
     },
     keymap = {
