@@ -1,5 +1,6 @@
 return {
   "neovim/nvim-lspconfig",
+  cond = jit.os == "OSX" or jit.arch == "arm64",
   opts = function()
     local Keys = require("lazyvim.plugins.lsp.keymaps").get()
     for i = 1, #Keys do

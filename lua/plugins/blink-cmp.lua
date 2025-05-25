@@ -1,6 +1,7 @@
 return {
   "saghen/blink.cmp",
   enabled = true,
+  cond = jit.os == "OSX" or jit.arch == "arm64",
   opts = {
     completion = {
       menu = { border = "single" },

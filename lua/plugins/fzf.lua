@@ -1,5 +1,6 @@
 return {
   "ibhagwan/fzf-lua",
+  cond = jit.os == "OSX" or jit.arch == "arm64",
   opts = function()
     local opts = {
       manpages = { previewer = "man_native" },

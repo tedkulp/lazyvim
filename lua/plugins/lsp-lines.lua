@@ -2,6 +2,7 @@ return {
   "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
   name = "lsp_lines",
   event = "LspAttach",
+  cond = jit.os == "OSX" or jit.arch == "arm64",
   config = function()
     require("lsp_lines").setup()
 

@@ -1,5 +1,6 @@
 return {
   "epwalsh/obsidian.nvim",
+  cond = jit.os == "OSX" or jit.arch == "arm64",
   version = "*", -- recommended, use latest release instead of latest commit
   -- lazy = true,
   -- ft = "markdown",

@@ -1,5 +1,6 @@
 return {
   "christoomey/vim-tmux-navigator",
+  cond = jit.os == "OSX" or jit.arch == "arm64",
   cmd = {
     "TmuxNavigateLeft",
     "TmuxNavigateDown",

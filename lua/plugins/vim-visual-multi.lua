@@ -1,6 +1,7 @@
 return {
   "mg979/vim-visual-multi",
   vscode = true,
+  cond = jit.os == "OSX" or jit.arch == "arm64",
   init = function()
     vim.cmd([[
       let g:VM_theme = 'neon'
