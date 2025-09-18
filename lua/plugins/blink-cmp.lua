@@ -1,5 +1,6 @@
 return {
   "saghen/blink.cmp",
+  vscode = false,
   enabled = true,
   cond = jit.os == "OSX" or jit.arch == "arm64",
   opts = {
